@@ -4,10 +4,10 @@ include 'Conexion.php';
 // Obtener datos del formulario
 $nombre = $_POST["nombre"];
 $email = $_POST["email"];
-$telefono = $_POST["telefono"];
+$contraseña = $_POST["contraseña"];
 
 // Insertar datos en la base de datos
-$sql = "INSERT INTO datos (nombre,email, telefono) VALUES ('$nombre', '$email', '$telefono')";
+$sql = "INSERT INTO registro (nombre,email, contraseña) VALUES ('$nombre', '$email', '$contraseña')";
 
 if ($conn->query($sql) === TRUE) {
     header("Location: mostrar.php");
